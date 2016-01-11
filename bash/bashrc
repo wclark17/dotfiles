@@ -1,0 +1,13 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+alias cls='tput clear'
+
+PROMPT_COMMAND='echo -en "\033]0;$PWD\007"'
+wname() { echo -en "\033]0;$@\007"; }
+
+PS1="[\[\033[0;33m\]\u\[\033[0;36m\]@\[\033[1;36m\]\h\[\033[0m\]\[\033[0m\]:\[\033[1;34m\]\w\[\033[0m\]] > "
